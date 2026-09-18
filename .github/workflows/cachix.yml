@@ -3,7 +3,7 @@ name: Cachix
 on:
   push:
     branches:
-      - master
+    - master
 
 permissions:
   contents: read
@@ -14,7 +14,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os:
+        - ubuntu-latest
     steps:
     - name: Checkout sources
       uses: actions/checkout@v7
