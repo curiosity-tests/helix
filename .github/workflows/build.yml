@@ -20,8 +20,6 @@ on:
     branches:
     - master
   merge_group:
-  schedule:
-  - cron: "00 01 * * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}-${{ inputs.leg || 'push' }}-${{ inputs.racecar_run }}
